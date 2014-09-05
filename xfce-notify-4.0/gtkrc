@@ -1,0 +1,31 @@
+style "carbole-window"
+{
+    bg[NORMAL] = "#4d4d4d"
+    XfceNotifyWindow::border-color = "#333333"
+    XfceNotifyWindow::border-radius = 8.0
+    XfceNotifyWindow::border-color-hover = "#222222"
+    XfceNotifyWindow::border-width-hover = 3.0
+}
+class "XfceNotifyWindow" style "carbole-window"
+
+style "carbole-button"
+{
+    bg[NORMAL] = "#202020"
+    bg[PRELIGHT] = "#404040"
+    fg[NORMAL] = "#ffffff"
+    fg[PRELIGHT] = "#ffffff"
+}
+widget_class "XfceNotifyWindow.*.GtkButton*" style "carbole-button"
+
+style "carbole-text"
+{
+    fg[NORMAL] = "#ffffff"
+    GtkWidget::link-color = "#a7a7a7"
+}
+widget_class "XfceNotifyWindow.*.<GtkLabel>" style "carbole-text"
+
+style "carbole-summary"
+{
+    font_name = "Bold"
+}
+widget "XfceNotifyWindow.*.summary" style "carbole-summary"
